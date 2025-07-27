@@ -1,0 +1,117 @@
+// Test control flow structures
+say("Testing control flow...");
+
+// If-else statements
+x = 10;
+if x > 5 {
+    say("x is greater than 5");
+}
+
+if x < 5 {
+    say("x is less than 5");
+} else {
+    say("x is not less than 5");
+}
+
+// Nested if-else
+score = 85;
+if score >= 90 {
+    say("Grade: A");
+} else {
+    if score >= 80 {
+        say("Grade: B");
+    } else {
+        if score >= 70 {
+            say("Grade: C");
+        } else {
+            say("Grade: F");
+        }
+    }
+}
+
+// While loops
+say("Counting from 1 to 5:");
+i = 1;
+while i <= 5 {
+    say("Count: " + i);
+    i = i + 1;
+}
+
+// While loop with break condition
+say("Finding first number greater than 50:");
+num = 1;
+while num < 100 {
+    if num > 50 {
+        say("Found: " + num);
+        num = 100; // Break out of loop
+    } else {
+        num = num + 1;
+    }
+}
+
+// Nested loops
+say("Multiplication table (3x3):");
+row = 1;
+while row <= 3 {
+    col = 1;
+    while col <= 3 {
+        result = row * col;
+        say(row + " x " + col + " = " + result);
+        col = col + 1;
+    }
+    row = row + 1;
+}
+
+// Complex conditions with logical operators
+a = 5;
+b = 10;
+c = 15;
+
+if a < b && b < c {
+    say("a < b < c is true");
+}
+
+if a > b || b < c {
+    say("a > b OR b < c is true");
+}
+
+// Function with control flow
+fun isEven(n) {
+    // Simple even check without modulo
+    half = n / 2;
+    doubled = half * 2;
+    if doubled == n {
+        giveback "even";
+    } else {
+        giveback "odd";
+    }
+}
+
+say("5 is " + isEven(5));
+say("8 is " + isEven(8));
+
+// Control flow with lists
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+evens = [];
+odds = [];
+
+i = 0;
+while i < len(numbers) {
+    num = get(numbers, i);
+    // Simple even/odd check without modulo
+    half = num / 2;
+    doubled = half * 2;
+    if doubled == num {
+        append(evens, num);
+    } else {
+        append(odds, num);
+    }
+    i = i + 1;
+}
+
+say("Original: " + numbers);
+say("Evens: " + evens);
+say("Odds: " + odds);
+
+say("Control flow tests completed!");
+

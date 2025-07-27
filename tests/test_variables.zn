@@ -1,0 +1,41 @@
+// Test variable assignment and retrieval
+say("Testing variables...");
+
+// Basic assignment
+x = 10;
+y = 20;
+name = "ZARN";
+
+say("x = " + x);
+say("y = " + y);
+say("name = " + name);
+
+// Variable reassignment
+x = 30;
+say("x after reassignment = " + x);
+
+// String concatenation
+greeting = "Hello, " + name + "!";
+say(greeting);
+
+// Arithmetic operations
+sum = x + y;
+difference = x - y;
+product = x * y;
+quotient = x / y;
+
+say("sum = " + sum);
+say("difference = " + difference);
+say("product = " + product);
+say("quotient = " + quotient);
+
+// Boolean operations
+a = 5;
+b = 10;
+say("a > b: " + (a > b));
+say("a < b: " + (a < b));
+say("a == b: " + (a == b));
+say("a != b: " + (a != b));
+
+say("Variable tests completed!");
+

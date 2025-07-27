@@ -1,0 +1,46 @@
+// Hello World program in ZARN
+say("Hello, World!");
+say("Welcome to the ZARN programming language!");
+
+// Variables and arithmetic
+x = 10;
+y = 20;
+result = x + y;
+say("x + y = " + result);
+
+// Function definition and call
+fun factorial(n) {
+    if n <= 1 {
+        giveback 1;
+    } else {
+        giveback n * factorial(n - 1);
+    }
+}
+
+say("Factorial of 5 = " + factorial(5));
+
+// List operations
+numbers = [1, 2, 3, 4, 5];
+say("Original list: " + numbers);
+say("List length: " + len(numbers));
+
+append(numbers, 6);
+say("After append: " + numbers);
+
+set(numbers, 0, 10);
+say("After setting first element to 10: " + numbers);
+
+// User interaction
+name = input("What's your name? ");
+say("Nice to meet you, " + name + "!");
+
+// Control flow
+i = 1;
+say("Counting to 5:");
+while i <= 5 {
+    say("Count: " + i);
+    i = i + 1;
+}
+
+say("Program completed successfully!");
+

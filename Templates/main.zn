@@ -1,0 +1,40 @@
+// Welcome to your new ZARN project: {{PROJECT_NAME}}
+// This is the main entry point of your application
+
+say("Hello from {{PROJECT_NAME}}!");
+say("ZARN is ready to go!");
+
+// Your code starts here
+name = input("What's your name? ");
+say("Nice to meet you, " + name + "!");
+
+// Example function
+fun greet(person) {
+    say("Greetings, " + person + "!");
+    giveback "Greeting sent to " + person;
+}
+
+result = greet(name);
+say(result);
+
+// Example with lists
+numbers = [1, 2, 3, 4, 5];
+say("Numbers: " + get(numbers, 0) + ", " + get(numbers, 1) + ", ...");
+say("Total numbers: " + len(numbers));
+
+// Example with control flow
+if len(name) > 5 {
+    say("You have a long name!");
+} else {
+    say("You have a short name!");
+}
+
+// Example with loops
+counter = 1;
+while counter <= 3 {
+    say("Loop iteration: " + counter);
+    counter = counter + 1;
+}
+
+say("Thanks for trying {{PROJECT_NAME}}!");
+

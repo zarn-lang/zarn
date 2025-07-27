@@ -1,0 +1,142 @@
+// ZARN Programming Language - Final Demonstration
+say("ZARN Programming Language v1.0");
+say("===============================");
+
+// Variables and basic operations
+say("1. Variables and Operations");
+name = "ZARN";
+version = 1.0;
+say("Language: " + name);
+say("Version: " + version);
+
+// Arithmetic
+x = 10;
+y = 20;
+sum = x + y;
+product = x * y;
+say("10 + 20 = " + sum);
+say("10 * 20 = " + product);
+
+// 2. Functions
+say("");
+say("2. Functions");
+
+fun greet(person) {
+    say("Hello, " + person + "!");
+    giveback "Greeting sent";
+}
+
+result = greet("World");
+say("Function result: " + result);
+
+// Recursive function
+fun factorial(n) {
+    if n <= 1 {
+        giveback 1;
+    } else {
+        giveback n * factorial(n - 1);
+    }
+}
+
+fact5 = factorial(5);
+say("Factorial of 5: " + fact5);
+
+// 3. Lists and built-in functions
+say("");
+say("3. Lists and Built-in Functions");
+
+numbers = [1, 2, 3, 4, 5];
+say("Original list: " + numbers);
+say("List length: " + len(numbers));
+say("First element: " + get(numbers, 0));
+
+append(numbers, 6);
+say("After append: " + numbers);
+
+set(numbers, 0, 10);
+say("After modification: " + numbers);
+
+// 4. Control flow
+say("");
+say("4. Control Flow");
+
+score = 85;
+if score >= 90 {
+    say("Grade: A");
+} else {
+    if score >= 80 {
+        say("Grade: B");
+    } else {
+        say("Grade: C");
+    }
+}
+
+// Loop demonstration
+say("Counting to 5:");
+i = 1;
+while i <= 5 {
+    say("Count: " + i);
+    i = i + 1;
+}
+
+// 5. List processing
+say("");
+say("5. List Processing");
+
+fun findMax(list) {
+    if len(list) == 0 {
+        giveback nothing;
+    }
+    
+    max = get(list, 0);
+    i = 1;
+    while i < len(list) {
+        current = get(list, i);
+        if current > max {
+            max = current;
+        }
+        i = i + 1;
+    }
+    giveback max;
+}
+
+testData = [3, 7, 2, 9, 1, 5];
+maximum = findMax(testData);
+say("Data: " + testData);
+say("Maximum: " + maximum);
+
+// 6. Nested data structures
+say("");
+say("6. Data Structures");
+
+students = [
+    ["Alice", 22],
+    ["Bob", 20],
+    ["Charlie", 21]
+];
+
+say("Students:");
+j = 0;
+while j < len(students) {
+    student = get(students, j);
+    studentName = get(student, 0);
+    studentAge = get(student, 1);
+    say("  " + studentName + " (age " + studentAge + ")");
+    j = j + 1;
+}
+
+// Final message
+say("");
+say("ZARN Demonstration Complete!");
+say("============================");
+say("Features shown:");
+say("- Variables and arithmetic");
+say("- Functions with return values");
+say("- Recursion");
+say("- Lists and built-in functions");
+say("- Control flow (if/else, while)");
+say("- List processing algorithms");
+say("- Nested data structures");
+say("");
+say("ZARN is ready for real programming!");
+

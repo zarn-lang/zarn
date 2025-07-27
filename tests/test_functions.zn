@@ -1,0 +1,65 @@
+// Test function definitions and calls
+say("Testing functions...");
+
+// Simple function with no parameters
+fun sayHello() {
+    say("Hello from function!");
+}
+
+sayHello();
+
+// Function with parameters
+fun greet(name) {
+    say("Hello, " + name + "!");
+}
+
+greet("Alice");
+greet("Bob");
+
+// Function with return value
+fun add(a, b) {
+    giveback a + b;
+}
+
+result = add(5, 3);
+say("5 + 3 = " + result);
+
+// Function with multiple parameters and complex logic
+fun max(a, b) {
+    if a > b {
+        giveback a;
+    } else {
+        giveback b;
+    }
+}
+
+say("max(10, 20) = " + max(10, 20));
+say("max(30, 15) = " + max(30, 15));
+
+// Recursive function
+fun fibonacci(n) {
+    if n <= 1 {
+        giveback n;
+    } else {
+        giveback fibonacci(n - 1) + fibonacci(n - 2);
+    }
+}
+
+say("fibonacci(0) = " + fibonacci(0));
+say("fibonacci(1) = " + fibonacci(1));
+say("fibonacci(5) = " + fibonacci(5));
+say("fibonacci(8) = " + fibonacci(8));
+
+// Function calling another function
+fun square(x) {
+    giveback x * x;
+}
+
+fun sumOfSquares(a, b) {
+    giveback square(a) + square(b);
+}
+
+say("sumOfSquares(3, 4) = " + sumOfSquares(3, 4));
+
+say("Function tests completed!");
+

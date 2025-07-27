@@ -1,0 +1,65 @@
+// Test lists and built-in functions
+say("Testing lists and built-in functions...");
+
+// Create lists
+numbers = [1, 2, 3, 4, 5];
+mixed = [1, "hello", 3.14, nothing];
+empty = [];
+
+say("numbers = " + numbers);
+say("mixed = " + mixed);
+say("empty = " + empty);
+
+// Test len() function
+say("len(numbers) = " + len(numbers));
+say("len(mixed) = " + len(mixed));
+say("len(empty) = " + len(empty));
+say("len(hello) = " + len("hello"));
+
+// Test get() function
+say("get(numbers, 0) = " + get(numbers, 0));
+say("get(numbers, 2) = " + get(numbers, 2));
+say("get(numbers, 4) = " + get(numbers, 4));
+say("get(mixed, 1) = " + get(mixed, 1));
+
+// Test set() function
+say("Before set: numbers = " + numbers);
+set(numbers, 0, 10);
+say("After set(numbers, 0, 10): numbers = " + numbers);
+set(numbers, 2, 30);
+say("After set(numbers, 2, 30): numbers = " + numbers);
+
+// Test append() function
+say("Before append: numbers = " + numbers);
+append(numbers, 6);
+say("After append(numbers, 6): numbers = " + numbers);
+append(numbers, "end");
+say("After append(numbers, end): numbers = " + numbers);
+
+// Test list indexing with []
+say("numbers[0] = " + numbers[0]);
+say("numbers[1] = " + numbers[1]);
+say("numbers[len(numbers) - 1] = " + numbers[len(numbers) - 1]);
+
+// Nested lists
+nested = [[1, 2], [3, 4], [5, 6]];
+say("nested = " + nested);
+say("nested[0] = " + nested[0]);
+say("nested[1][0] = " + get(get(nested, 1), 0));
+
+// List operations in functions
+fun sumList(list) {
+    total = 0;
+    i = 0;
+    while i < len(list) {
+        total = total + get(list, i);
+        i = i + 1;
+    }
+    giveback total;
+}
+
+testNumbers = [1, 2, 3, 4, 5];
+say("Sum of " + testNumbers + " = " + sumList(testNumbers));
+
+say("List tests completed!");
+
