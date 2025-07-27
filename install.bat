@@ -28,8 +28,18 @@ if %errorLevel% neq 0 (
 )
 
 echo.
-echo Installing globally...
+echo Running install command...
 dotnet run install
+
+echo.
+echo Creating global launcher...
+set "ZARN_EXE=%cd%\bin\Debug\net8.0\zarn.exe"
+set "LAUNCHER=%USERPROFILE%\AppData\Local\Microsoft\WindowsApps\zarn.cmd"
+
+(
+    echo @echo off
+    echo "%ZARN_EXE%" %%*
+) > "%LAUNCHER%"
 
 echo.
 echo Installation complete!
@@ -41,4 +51,5 @@ echo   zarn run script.zn
 echo.
 echo Press any key to exit...
 pause >nul
+
 
